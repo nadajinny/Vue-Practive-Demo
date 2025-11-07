@@ -2,15 +2,16 @@
   <div>Hello, {{ message }}</div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
-  name: "E01Instance",
-  data() {
-    return {
-      message: "Vue!"
-    };
-  }
+  name: 'E01Instance',
 };
+</script>
+
+<script setup lang="ts">
+import { ref } from 'vue';
+
+const message = ref('Vue!');
 </script>
 
 <style scoped>

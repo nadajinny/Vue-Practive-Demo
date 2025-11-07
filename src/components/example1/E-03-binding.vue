@@ -5,13 +5,14 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
-  name: "E03Binding",
-  data() {
-    return {
-      message: "Hello Vue"
-    };
-  }
+  name: 'E03Binding',
 };
+</script>
+
+<script setup lang="ts">
+import { ref } from 'vue';
+
+const message = ref('Hello Vue');
 </script>

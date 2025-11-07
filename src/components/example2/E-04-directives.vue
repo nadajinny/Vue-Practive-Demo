@@ -51,22 +51,23 @@
  -->
 </template>
 
-<script>
+<script lang="ts">
 export default {
-  name: "E04Directives",
-  data() {
-    return {
-      isVisible: true,
-      items: [
-        { id: 1, name: "Item 1" },
-        { id: 2, name: "Item 2" },
-        { id: 3, name: "Item 3" },
-        { id: 4, name: "Item 4" },
-      ],
-      count: 0,
-    };
-  }
+  name: 'E04Directives',
 };
+</script>
+
+<script setup lang="ts">
+import { ref } from 'vue';
+
+const isVisible = ref(true);
+const items = ref([
+  { id: 1, name: 'Item 1' },
+  { id: 2, name: 'Item 2' },
+  { id: 3, name: 'Item 3' },
+  { id: 4, name: 'Item 4' },
+]);
+const count = ref(0);
 </script>
 
 <style scoped>
